@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  padding: 5px;
+  width: 100%;
+  margin: 30px auto;
+
+/* Experiencing gradient background color effect; */
+  /* background: linear-gradient(#999,#006897); */
+}
+header {
+  padding: 0 15px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.columns {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 50px 10px;
+}
+
+.column {
+  flex: 1;
+  border: 2px solid black;
+  margin: 10px;
+  background-color: #999;
+}
+
+.card {
+  width: 100px;
+  color: black;
+  text-align: center;
+  right: 0;
+  top: 0;
+  float: right;
+  clear: both;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.card:hover{
+  background-color: cornflowerblue;
+  color: #111;
+}
+
+.column p {
+  float: left;
+  padding: 10px;
+  color: black;
+}
+.column:hover, .column p:hover{
+  color: white;
+  background-color: teal;
+}
+.chicken {
+  background-color: darksalmon;
+}
+.beef {
+  background-color: rgb(231, 69, 40);
+  color: white;
+}
+.sushi {
+  background-color: wheat;
+}
+@media screen and (max-width: 991px) {
+  .columns .column {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 0 10px 0;
+  }
+}
